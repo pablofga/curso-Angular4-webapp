@@ -6,18 +6,17 @@ import { Image } from '../models/image';
 import { GLOBAL } from './global';
 
 @Injectable()
-export class ImageService{
-    public url:string;
+export class ImageService {
+    public url: string;
 
-    constructor(private _http:Http){
-        this.url=GLOBAL.url;
+    constructor(private _http: Http) {
+        this.url = GLOBAL.url;
     }
-    
-    addImage(image:Image){
+    addImage(image: Image) {
         let json=JSON.stringify(image);
         let params = json;
-        let headers = new Headers({'Content-Type':'application/json'});
+        let headers = new Headers({'Content-Type': 'application/json'});
 
-        return this._http.post(this.url+'image',params,{headers:headers}).map(res => res.json());
+        return this._http.post(this.url + 'image', params, {headers: headers}).map(res => res.json());
     }
 }
