@@ -2,7 +2,7 @@
 <hr/>
 
 <form #formProducto="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-producto">
-    
+
     <label>
         Nombre
         <span *ngIf="!nombre.valid && nombre.touched" class="label label-danger">El nombre es obligatorio</span>
@@ -21,7 +21,7 @@
     <label>
         Imagen
     </label>
-    <input type="file" class="form-control">
+    <input type="file" class="form-control" (change)="fileChangeEvent($event)" />
     <br/>
     <input type="submit" value="{{titulo}}" [disabled]="!formProducto.form.valid" class="btn btn-success">
 </form>

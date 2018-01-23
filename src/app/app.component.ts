@@ -8,9 +8,9 @@ import { GLOBAL } from './services/global';
 })
 export class AppComponent {
   public title = 'Productos Angular 4';
-  public header_color:string;
+  public header_color: string;
 
-  constructor(){
-      this.header_color=GLOBAL.header_color;
+  constructor() {
+      this.header_color = GLOBAL.header_color;
   }
 }
