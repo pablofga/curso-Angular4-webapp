@@ -37,6 +37,5 @@ export class ProductosListComponent {
                     console.log(<any>error);    
                 }
             );
-
         }
 }
